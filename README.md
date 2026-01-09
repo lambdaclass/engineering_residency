@@ -10,14 +10,14 @@ To complete the residency program, you must read the material from start to fini
 The program is self-paced, but is designed to be doable in about a month of part-time dedication.
 Once you have completed the program, you can let us know and we will schedule a few interviews to talk about your experience and go over your projects.
 
-Completion of the program, that is, studying the material and completing the projects, enables you to interview with us but does not guarantee acceptance. 
+Completion of the program, that is, studying the material and completing the projects, enables you to interview with us but does not guarantee acceptance to the residency. 
 Our goal when preparing this guide is to ensure that even if you are not accepted, you do take away what you learned as something valuable to your carreer as a software developer in these modern times.
 
 ---
 
 ## Table of Contents
 
-- [LambdaClass Hacking Learning Path](#lambdaclass-hacking-learning-path)
+- [engineering\_residency](#engineering_residency)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Part I The Foundation](#part-i-the-foundation)
@@ -26,14 +26,11 @@ Our goal when preparing this guide is to ensure that even if you are not accepte
       - [Ego, Learning to fail, and Your relationship with your own work](#ego-learning-to-fail-and-your-relationship-with-your-own-work)
       - [Principles for success and teamwork philosophy](#principles-for-success-and-teamwork-philosophy)
       - [Professionalism and Ethics](#professionalism-and-ethics)
-    - [Practices at Lambda](#practices-at-lambda)
+    - [Practices at Lambda (for those that join the residency)](#practices-at-lambda-for-those-that-join-the-residency)
       - [Development processes and workflows](#development-processes-and-workflows)
       - [Design and coding standards](#design-and-coding-standards)
       - [Working on open-source projects](#working-on-open-source-projects)
-      - [Documentation](#documentation)
-      - [Community projects](#community-projects)
-      - [Learning Projects \[REDO\]](#learning-projects-redo)
-      - [Cryptography](#cryptography)
+      - [Learning Projects](#learning-projects)
     - [Technical Foundations](#technical-foundations)
       - [Development Environment](#development-environment)
         - [Homebrew](#homebrew)
@@ -58,16 +55,21 @@ Our goal when preparing this guide is to ensure that even if you are not accepte
       - [Redis](#redis)
   - [Part II Specific Topics](#part-ii-specific-topics)
     - [Rust](#rust)
-      - [Project - Rusty Merkle Tree](#project---rusty-merkle-tree)
+      - [Exercises](#exercises)
+      - [Project: Rusty Merkle Tree](#project-rusty-merkle-tree)
+      - [Project: Async Linkchecker](#project-async-linkchecker)
     - [The BEAM Ecosystem](#the-beam-ecosystem)
       - [Elixir](#elixir)
+        - [Phoenix](#phoenix)
+        - [Project: Forth Interpreter](#project-forth-interpreter)
       - [Gleam](#gleam)
+        - [Project](#project)
     - [Distributed Systems](#distributed-systems)
-      - [Designing Data-Intensive Applications](#designing-data-intensive-applications)
-      - [CRDTs](#crdts)
     - [Performance Engineering](#performance-engineering)
+      - [Project](#project-1)
     - [Language Engineering](#language-engineering)
       - [Virtual Machines and Runtimes](#virtual-machines-and-runtimes)
+        - [Project: Rusty LC3](#project-rusty-lc3)
     - [General Cryptography](#general-cryptography)
     - [Blockchains](#blockchains)
     - [Bitcoin](#bitcoin)
@@ -75,17 +77,7 @@ Our goal when preparing this guide is to ensure that even if you are not accepte
       - [Introductory Material](#introductory-material)
       - [Ecosystem](#ecosystem)
       - [EVM](#evm)
-      - [Account Abstraction](#account-abstraction)
-      - [Consensus](#consensus)
-      - [Scalability and Rollups](#scalability-and-rollups)
-      - [Validium](#validium)
-      - [Provers and zkVMs](#provers-and-zkvms)
-        - [zkVMs](#zkvms)
-        - [SP1](#sp1)
-      - [Multi Provers and TEEs](#multi-provers-and-tees)
-      - [MEV](#mev)
-      - [Based Rollups and Rogue](#based-rollups-and-rogue)
-      - [Ethrex L2 Documentation](#ethrex-l2-documentation)
+      - [Project](#project-2)
 
 ---
 ## Introduction
@@ -118,6 +110,8 @@ These characteristics, along with several others, define a company's culture.
 
 In these pages, you will find these principles and values, which are expected of anyone who is part of this institution, whether they are a newcomer or a settled employee, an intern or a manager, and how to solve non-technical problems. 
 LambdaClass is a company with high technical content, but this knowledge must be enhanced by cultural values that allow a fast identification of problems, as well as ways to solve them, based on different learnings and heuristics that many have experienced throughout this journey.
+
+Since you are in a self-guided course, you may be tempted to skip or skim through these contents, but we strongly recommend that you do not do so. In fact, we recommend that you do not read all the culture sections at once, nor read each of them completely in the same day, but that you take the time to read and reflect on each text or video, especially thinking about the reason why we decided to ask you to review that content. During the interviews at the end of the residency, you will be asked questions related to them, not to check whether you have read them, but to see if you are a cultural fit with the company. In fact, if you join the residency, one of the aspects we will monitor is whether you are adapting to the company culture.
 
 While this document aims to be useful, organized, and verified, it is important to note that knowledge and wisdom must be challenged, evaluated, and modified over time. 
 The ideas in these pages are not set in stone but are constantly being assessed and seeking to be refuted or improved.
@@ -259,44 +253,42 @@ Some of the most professional traits:
 - Flexibility: Commitment to your role also means being adaptable when circumstances change. As projects move forward, plans, goals, and requirements may shift, and you are expected to maintain professionalism throughout. At times, this may require adjusting your schedule—such as staying late to ensure a task or deadline is met.
 - Competency and a strong work ethic: Being highly skilled may be the first thing one thinks of in a professional. To be dependable, one first needs to be capable, so as not to leave others picking up the slack or doing more than their share of the work. Over time, keeping knowledge and skills up to date is also expected of a professional. No amount of highly specialized knowledge will compensate for this. Check your work for any errors before submitting it.
 
-### Practices at Lambda
+### Practices at Lambda (for those that join the residency)
 
 #### Development processes and workflows
 - There is a weekly call with every member of the team to set the most important goals of the week, as well as a daily call to focus on the problems of the daily tasks.
 - When working on projects, the specific tasks to tackle are written in tickets on Github Projects. Some actual Lambda's projects are working on other project management software, but these are legacy.
-- Chapter 1 of [The Manager's Path](https://www.amazon.com/Managers-Path-Leaders-Navigating-Growth/dp/1491973897/ref=sr_1_1?dchild=1&keywords=the+managers+path&qid=1625162711&s=books&sr=1-1)
+- There are regular 1-on-1 meetings to check on your well-being and how you're feeling at Lambda. These are not instances where you receive feedback. Feedback at Lambda is an ongoing process; you'll be recognized for what you're doing remarkably well or corrected if you're making a mistake. The idea of the 1-on-1 meetings is explained in Chapter 1 of [The Manager's Path](https://www.amazon.com/Managers-Path-Leaders-Navigating-Growth/dp/1491973897/ref=sr_1_1?dchild=1&keywords=the+managers+path&qid=1625162711&s=books&sr=1-1)
 
 #### Design and coding standards
 - [The Basics](https://matklad.github.io/2024/03/22/basic-things.html)
-- Suggested reading: [Coders at work](https://www.amazon.com/Coders-Work-Reflections-Craft-Programming/dp/1430219483)
-- [make is the build tool](https://medium.com/@jlouis666/how-to-build-stable-systems-6fe9dcf32fc4). Consider [these notes](http://gromnitsky.users.sourceforge.net/articles/notes-for-new-make-users/).
+- [make is the build tool](https://medium.com/@jlouis666/how-to-build-stable-systems-6fe9dcf32fc4).
 - Postgresql is the default database.
 - Write tests.
-- Favor integration tests over unit tests. A project's first tests should be end-to-end smoke and sanity tests, and only after that, if ever, should unit tests be written to test API's, system invariants, and help pinpoint bug causes and locations.
-- Do not write tests before you have solved the problem; you may waste time writing tests for the wrong implementation.
+  - Favor integration tests over unit tests. A project's first tests should be end-to-end smoke and sanity tests, and only after that, if ever, should unit tests be written to test API's, system invariants, and help pinpoint bug causes and locations.
+  - Do not write tests before you have solved the problem; you may waste time writing tests for the wrong implementation.
 - Write for humans: coding for computers is easy, but writing code that is understandable by another person is an art.
 - Code and document in English unless you have a very specific reason not to.
 - Use meaningful, readable names for variables, functions, and files. Don't try to save characters.
 - Documentation is a sign of the quality of an API. It's easier to write it when the design is right.
 - [The less code you have the better. Deleted code is debugged code](https://suckless.org/philosophy/).
 - Aim for simplicity, not performance. The latter is a by-product of the first.
-- Only introduce optimizations if you have benchmarks that prove an improvement and that the improvement is relevant in the context of the program.
+- Only introduce optimizations if you have benchmarks that prove an improvement, and that the improvement is relevant in the context of the program.
 - Only introduce optimizations if they represent a concrete gain (e.g., cost savings, improved user experience).
 - Follow the [Zen of Python](https://www.python.org/dev/peps/pep-0020/), regardless of the language you are using at the moment. English also counts as a language.
 - Don't introduce dependencies prematurely. You must evaluate your requirements, maintenance, and integration costs first.
 - If you want to upgrade a dependency, test it first.
 - Always lock your dependencies. Pin a specific version and a commit of a dependency, don't use the version at master.
-- Use git and commit often, even in one-person projects.
 - In general, avoid pinning the patch version of dependencies; more info [here](https://semver.org/).
+- Use git and commit often, even in one-person projects.
 
 #### Working on open-source projects
-- Suggested reading: [The Architecture of Open Source Applications](http://aosabook.org/en/index.html).
 - Use MIT or Apache 2.0 license.
   - [Apache vs MIT](https://snyk.io/learn/apache-license/)
   - [How to make sense of the Apache 2 patent license](https://opensource.com/article/18/2/apache-2-patent-license)
 - Fill the description field at the top of the repo page.
 - Write a decent README.
-- A good readme starts with a succinct description (one or two sentences) and, when possible, a very short and illustrative example use. The rest of the details go after this header.
+- A good README starts with a succinct description (one or two sentences) and, whenever possible, a very short and illustrative example use. The rest of the details go after this header.
 - Use continuous integration, most likely GitHub Actions.
 - Make a good balance of features vs maintenance. Maintenance details usually matter more than adding a lot of features.
 
@@ -338,11 +330,7 @@ The goal of doing all this for a learning project is to allow reviewers to skip 
 #### Development Environment
 We use a suite of tools to facilitate many tasks, as well as to enforce our security standards for all employees.
 
-Please refer to our [Notion document](https://www.notion.so/lambdaclass/Tool-Stack-c87055f2b3944624a6245e1cbfa904a5?pvs=4), which aims to provide a simple overview of all of our tools.
-
 Before beginning with this Journey, if you're a macOS user, you may need some tools or utils for a better experience in your learning path, otherwise, you can skip this section.
-- Two-step authentication is mandatory for every login of the company accounts (e.g. Slack, mail, GitHub).
-- Also, the company's GitHub repositories are [accessed via SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
 
 ##### Homebrew
 [Homebrew](https://brew.sh/) is a package manager for macOS. It is a must on any developer machine.
@@ -421,7 +409,7 @@ Also, while you shouldn't be blind to the future, avoid investing time and effor
 - There is the approach of doing things in "one true way", how does it affect extensibility?
 
 #### Linux
-If you've already installed GNU-tools, there's no need to install Linux on a VM.
+If you're a macOS user and you've already installed GNU-tools, there's no need to install Linux on a VM.
 - [The Linux Command Line](https://nostarch.com/tlcl2)
   - Chapters [1-7], [9-10], 14, [16-17] Basic shell usage
 - [Linux Basics for Hackers](https://nostarch.com/linuxbasicsforhackers)
@@ -464,7 +452,7 @@ If you've already installed GNU-tools, there's no need to install Linux on a VM.
 #### Version Control, Git, and Github
 
 ##### Git
-**No one** should merge his/her own PR without it being reviewed and approved by a co-worker and/or a client.
+**No one** should merge his/her own PR without it being reviewed and approved by a co-worker and/or a client. However in this selfguided course you're going to do just that. Please realize that this is a special scenario, and usually you should never merge your own PRs without being reviewed by a peer.
 
 *Note: commit and **push** every day. Don't expect something perfect, go for the concrete. In one way or another, you will likely have to iterate later about that work done. Also, since that work isn't only stored on your computer, it won't be lost.*
 
