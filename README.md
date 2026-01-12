@@ -1,4 +1,4 @@
-# engineering_residency
+# LambdaClass Engineering Residency
 
 Welcome to the LambdaClass Engineering Residency Self-learning Path! (name is a work in progress).
 It is similar to the Hacking Learning Path but tailored to self-guided newcomers.
@@ -17,7 +17,7 @@ Our goal when preparing this guide is to ensure that even if you are not accepte
 
 ## Table of Contents
 
-- [engineering\_residency](#engineering_residency)
+- [LambdaClass Engineering Residency](#lambdaclass_engineering_residency)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Part I The Foundation](#part-i-the-foundation)
@@ -56,20 +56,14 @@ Our goal when preparing this guide is to ensure that even if you are not accepte
   - [Part II Specific Topics](#part-ii-specific-topics)
     - [Rust](#rust)
       - [Exercises](#exercises)
-      - [Project: Rusty Merkle Tree](#project-rusty-merkle-tree)
-      - [Project: Async Linkchecker](#project-async-linkchecker)
-    - [The BEAM Ecosystem](#the-beam-ecosystem)
-      - [Elixir](#elixir)
-        - [Phoenix](#phoenix)
-        - [Project: Forth Interpreter](#project-forth-interpreter)
-      - [Gleam](#gleam)
-        - [Project](#project)
-    - [Distributed Systems](#distributed-systems)
+      - [Project - Rusty Merkle Tree](#project---rusty-merkle-tree)
+      - [Project - Async Linkchecker](#project---async-linkchecker)
+      - [Project - Rusty LC3](#project---rusty-lc3)
     - [Performance Engineering](#performance-engineering)
-      - [Project](#project-1)
-    - [Language Engineering](#language-engineering)
-      - [Virtual Machines and Runtimes](#virtual-machines-and-runtimes)
-        - [Project: Rusty LC3](#project-rusty-lc3)
+    - [Distributed Systems](#distributed-systems)
+    - [The BEAM Ecosystem - Elixir](#the-beam-ecosystem---elixir)
+      - [Phoenix](#phoenix)
+      - [Project - Forth Interpreter](#project---forth-interpreter)
     - [General Cryptography](#general-cryptography)
     - [Blockchains](#blockchains)
     - [Bitcoin](#bitcoin)
@@ -77,7 +71,6 @@ Our goal when preparing this guide is to ensure that even if you are not accepte
       - [Introductory Material](#introductory-material)
       - [Ecosystem](#ecosystem)
       - [EVM](#evm)
-      - [Project](#project-2)
 
 ---
 ## Introduction
@@ -292,15 +285,15 @@ Some of the most professional traits:
 - Use continuous integration, most likely GitHub Actions.
 - Make a good balance of features vs maintenance. Maintenance details usually matter more than adding a lot of features.
 
-#### Learning Projects
+#### Learning Projects Guidelines
 
-TODO: REDO
-
-The learning path is not just a pile of material to read through, and there is no exam at the end with questions you need to answer. 
-The point of gaining knowledge is to be able to *do* more things and apply them in problem
--solving.
+The learning path is not just a pile of material to read through, actually coding the projects is key to your learning process.
 The only way to learn how to do this is via practice, and since small exercises can only exercise very specific things, there are a few larger projects throughout the learning path that newcomers are expected to complete. 
 These projects are located in the respective section for their language.
+
+The point of gaining knowledge is to be able to *do* more things and apply them in problem-solving.
+If you do not actually do the practice, and either copy your work or rely on LLMs to generate the solution, you will gain nothing.
+At the end of the residency, during interviews you may be questioned on decisions you made during the implementation process.
 
 When the time comes to start one of the projects, please follow these steps:
 - Create a new github repository under your personal account.
@@ -317,9 +310,7 @@ When the time comes to start one of the projects, please follow these steps:
   - Another requirement is configuring branch protections for `main` and `dev` branches. Your CI must have jobs for ensuring that the code is formatted correctly according to the language's formatter, compiles, and passes tests. Each of these should be a separate job and required for merging a PR. 
 - For a PR to be eligible for merging, it must at least:
   - Have a good description of its contained changes.
-  - Compile, have no failingg tests and pass all CI checks.
-  - Have two approvals from other reviewers. 
-  - Auto-approving is _verboten_!
+  - Compile, have no failing tests and pass all CI checks.
 
 The goal of doing all this for a learning project is to allow reviewers to skip the more basic corrections and address more meaningful corrections, and to make you familiar with the basic expectations and workflow of any project at LambdaClass. 
 
@@ -541,6 +532,7 @@ git rebase -i --exec "git commit --amend --no-edit -S" main
 - [Quickstart for GitHub Actions](https://docs.github.com/en/actions/quickstart)
 
 #### SQL and PostgreSQL
+
 - [SQL Bolt](https://sqlbolt.com/) (RECOMMENDED)
 - [Mystery solver with SQL](https://mystery.knightlab.com/) (PRACTICE-RECOMMENDED)
 - Chapters [10-11] from [SQL: Practical Guide for Developers](https://www.amazon.com/SQL-Practical-Guide-Developers-Guides/dp/0122205316)
@@ -555,6 +547,7 @@ git rebase -i --exec "git commit --amend --no-edit -S" main
 - What does `LIKE 'S%'` do in a query?
 
 #### Redis
+
 - [Introduction to Redis performance](https://www.youtube.com/watch?v=-5RTyEim384)
 - [An introduction to Redis data types and abstractions](https://redis.io/topics/data-types-intro)
 - [Redis Transactions](https://redis.io/topics/transactions)
@@ -566,9 +559,11 @@ git rebase -i --exec "git commit --amend --no-edit -S" main
 - What makes each database type unique?
 
 ---
+
 ## Part II Specific Topics
 
 ---
+
 ### Rust
 
 There are now many books on Rust and specific topics within Rust but we consider the following to be of the highest quality/relevance, and required reading:
@@ -592,6 +587,7 @@ The following resources are NOT required reading but may be useful during the de
 - [Rust for Rustaceans](https://nostarch.com/rust-rustaceans)
 
 #### Exercises
+
 The rustlings are a series of short exercises designed to give you a guided introduction to the language's features. 
 Before starting the other projects in this course, complete the rustlings exercises.
 
@@ -602,98 +598,25 @@ rustlings lsp
 
 #### Project: Rusty Merkle Tree
 
-Merkle trees have become an important data structure to understand, and have wide applicability including in areas that are not blockchain-related.
-
-The goal of this project is to implement you own library crate in Rust implementing a Merkle tree.
-
-TODO: improve project statement and guidelines, point to the general project development guidelines section.
-
-Implement a simple Merkle Tree in Rust.
-- A Merkle Tree can be built out of an array.
-- A Merkle Tree can generate a proof that it contains an element.
-- A Merkle Tree can verify that a given hash is contained in it.
-- A Merkle Tree can be dynamic, this means that elements can be added once it is built.
-
-We suggest starting simple, do not optimize prematurely because it's pretty sure that you're not gonna need those optimizations.
-
-Here are some sources that you might find useful:
-- [Merkle Tree - Brilliant.org](https://brilliant.org/wiki/merkle-tree/)
-- [Merkle Tree Verify in Solidity](https://www.youtube.com/watch?v=n6nEPaE7KZ8)
-- [Merkle Tree - Wikipedia](https://en.wikipedia.org/wiki/Merkle_tree)
-- [Merkle Tree - What is a Merkle Tree?](https://decentralizedthoughts.github.io/2020-12-22-what-is-a-merkle-tree/)
-- [Introduction to Merkle Tree - GeeksforGeeks](https://www.geeksforgeeks.org/introduction-to-merkle-tree/)
-- [Merkle Tree in Blockchain: What It Is and How It Works](https://www.investopedia.com/terms/m/merkle-tree.asp)
+See the [project description](projects/rust_merkle_tree.md).
 
 #### Project: Async Linkchecker
 
-TODO
+See the [project description](projects/rust_linkchecker.md).
+
+#### Project: Rusty LC3
+
+See the [project description](projects/rust_lc3_vm.md).
 
 ---
-### The BEAM Ecosystem
+### Performance Engineering
 
-In the beginning, the BEAM and Erlang were almost synonymous, there were no other languages that ran on the BEAM virtual machine and ERTS. 
-In fact the core of the platform is the ERTS -- the Erlang Run Time System. 
-In time, others have emerged such as LFE, Elixir, and Gleam. 
-Today, the most common gateway into the ecosystem is learning how to be productive with Elixir, learning the serial (non-concurrent) and functional programming aspects first, and then the support for concurrency, the common concurrency and distribution patterns provided by the OTP. This is usually eventually complemented by learning Erlang to be able to understand and read code from common dependencies (e.g. Cowboy).
-Lately, Gleam has also matured and is a very interesting possibility. 
-
-#### Elixir
-- [Elixir Homepage](https://elixir-lang.org)
-- [The Soul of Erlang and Elixir • Sasa Juric • GOTO 2019](https://www.youtube.com/watch?v=JvBT4XBdoUE)
-- [When would you choose Erlang?](https://web.archive.org/web/20150810202529/http://blog.troutwine.us/2013/07/10/choose-erlang) Although Brian Troutwine talks about Erlang in this post, most of the content applies to Elixir as well.
-- [The Zen of Erlang](https://ferd.ca/the-zen-of-erlang.html) Erlang base principles and good practices, these also apply to Elixir.
-- Read the entire `Getting started` section starting at [the introduction](https://elixir-lang.org/getting-started/introduction.html)  EXCEPT:
-  - "Module attributes"
-  - "Protocols"
-  - "Sigils"
-  - "Writing documentation"
-  - "Optional syntax cheatsheet"
-  - "Erlang Libraries"
-
-In addition, read:
-- the documentation for Mix (https://hexdocs.pm/mix/Mix.html)
-- the documentation for ExUnit (https://hexdocs.pm/ex_unit/ExUnit.html
-
-##### Phoenix
-- [Phoenix Official Guides](https://www.phoenixframework.org/)
-  - Introduction (Except for _Community_)
-  - Guides (Except for _Asset Management_)
-  - Authentication
-  - Testing (Except for _Testing Channels_)
-- [Phoenix Chat Example](https://github.com/dwyl/phoenix-chat-example)
-
-##### Project: Forth Interpreter
-
-TODO: improve project statement and clarify requirements, add tests
-
-Implement an evaluator for a very simple subset of Forth.
-
-[Forth](https://en.wikipedia.org/wiki/Forth_%28programming_language%29) is a stack-based programming language. 
-Implement a very basic evaluator for a small subset of Forth.
-
-- Requirements:
-  - 1: Core language
-    - Your evaluator has to support the following words:
-      - `+`, `-`, `*`, `/` (integer arithmetic)
-      - `DUP`, `DROP`, `SWAP`, `OVER` (stack manipulation)
-    - Your evaluator also has to support defining new words using the customary syntax: `: word-name definition ;`.
-    - To keep things simple the only data type you need to support is signed integers of at least 16 bits size.
-  - 2: User interface
-    - The evaluator must also be available via a web interface served by Phoenix Liveview. 
-    - The user interface features must include:
-      - uploading a forth program
-      - requesting an evaluation
-      - showing the results
-      - a history of evaluated programs
-
-#### Gleam
-
-TODO: Confirm that we include Gleam and a project
-- [Gleam Homepage](https://gleam.run/)
-
-##### Project
-
-TODO
+- [Moore's Law, Microprocessors, and First Principles](https://www.youtube.com/watch?v=Nb2tebYAaOA)
+- [What Every Programmer Should Know about How CPUs Work • Matt Godbolt • GOTO 2024](https://youtu.be/-HNpim5x-IE?si=_T0lB-FoEEQipQZC)
+- [Brendan Gregg: Flamegraphs](https://www.brendangregg.com/flamegraphs.html)
+- [Datadog: Flamegraphs](https://www.datadoghq.com/knowledge-center/distributed-tracing/flame-graph/)
+- [Profiling Rust programs the easy way](https://www.ntietz.com/blog/profiling-rust-programs-the-easy-way/)
+- [Making slow Rust code fast](https://patrickfreed.github.io/rust/2021/10/15/making-slow-rust-code-fast.html)
 
 ---
 ### Distributed Systems
@@ -711,30 +634,46 @@ TODO
 - [The State of State Based CRDTs](https://www.bartoszsypytkowski.com/the-state-of-a-state-based-crdts/)
 
 ---
-### Performance Engineering
+### The BEAM Ecosystem: Elixir
 
-- [Moore's Law, Microprocessors, and First Principles](https://www.youtube.com/watch?v=Nb2tebYAaOA)
-- [What Every Programmer Should Know about How CPUs Work • Matt Godbolt • GOTO 2024](https://youtu.be/-HNpim5x-IE?si=_T0lB-FoEEQipQZC)
+In the beginning, the BEAM and Erlang were almost synonymous, there were no other languages that ran on the BEAM virtual machine and ERTS. 
+In fact the core of the platform is the ERTS -- the Erlang Run Time System. 
+In time, others have emerged such as LFE, Elixir, and Gleam. 
+Today, the most common gateway into the ecosystem is learning how to be productive with Elixir, learning the serial (non-concurrent) and functional programming aspects first, and then the support for concurrency, the common concurrency and distribution patterns provided by the OTP. This is usually eventually complemented by learning Erlang to be able to understand and read code from common dependencies (e.g. Cowboy).
+Lately, Gleam has also matured and is a very interesting possibility. 
 
-TODO: add flamegraph and rust resources
+- [Elixir Homepage](https://elixir-lang.org)
+- [The Soul of Erlang and Elixir • Sasa Juric • GOTO 2019](https://www.youtube.com/watch?v=JvBT4XBdoUE)
+- [When would you choose Erlang?](https://web.archive.org/web/20150810202529/http://blog.troutwine.us/2013/07/10/choose-erlang) Although Brian Troutwine talks about Erlang in this post, most of the content applies to Elixir as well.
+- [The Zen of Erlang](https://ferd.ca/the-zen-of-erlang.html) Erlang base principles and good practices, these also apply to Elixir.
+- Read the entire `Getting started` section starting at [the introduction](https://elixir-lang.org/getting-started/introduction.html)  EXCEPT:
+  - "Module attributes"
+  - "Protocols"
+  - "Sigils"
+  - "Writing documentation"
+  - "Optional syntax cheatsheet"
+  - "Erlang Libraries"
 
-#### Project
+In addition, read:
+- the documentation for Mix (https://hexdocs.pm/mix/Mix.html)
+- the documentation for ExUnit (https://hexdocs.pm/ex_unit/ExUnit.html
 
-TODO: project statement
+#### Phoenix
+- [Phoenix Official Guides](https://www.phoenixframework.org/)
+  - Introduction (Except for _Community_)
+  - Guides (Except for _Asset Management_)
+  - Authentication
+  - Testing (Except for _Testing Channels_)
+- [Phoenix Chat Example](https://github.com/dwyl/phoenix-chat-example)
+
+#### Project: Forth Interpreter
+
+See the [project description](projects/elixir_forth.md).
 
 ---
-### Language Engineering
 
-#### Virtual Machines and Runtimes
-
-- [Write your own virtual machine](https://justinmeiners.github.io/lc3-vm/)
-
-##### Project: Rusty LC3
-
-TODO: project statement
-
----
 ### General Cryptography
+
 - [crypto101](https://www.crypto101.io/) Crypto 101 is an introductory course on cryptography, freely available for programmers of all ages and skill levels.
 
 ---
@@ -802,7 +741,3 @@ The rest are for reference or reading at your own pace.
 - Parts I and II from: [Building an EVM from scratch](https://karmacoma.notion.site/Building-an-EVM-from-scratch-series-90ee3c827b314e0599e705a1152eecf9) 
 - [A Playdate with the EVM](https://web.archive.org/web/20250126120648/https://femboy.capital/evm-pt1)
 - [EVM Deep Dives](https://noxx.substack.com/p/evm-deep-dives-the-path-to-shadowy)
-
-#### Project
-
-TODO: project statement, modify ethrex somehow
