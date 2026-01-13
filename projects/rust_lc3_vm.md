@@ -8,7 +8,7 @@ However, this project involves considerably more functionality than the previous
 The VM has has several opcodes and a memory model that must be respected. 
 
 One of the common pitfalls is to implement too much before having proper integration tests. 
-Another common pitfall is to test opcode functionality individually but not how they work togethe in a real program.
+Another common pitfall is to test opcode functionality individually, but not how they work together in a real program.
 
 As always, try to keep the code simple and do not overengineer the solution. 
 
