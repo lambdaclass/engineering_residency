@@ -1,7 +1,6 @@
 # LambdaClass Engineering Residency Self Learning Path
 
 Welcome to the LambdaClass Engineering Residency Self Learning Path!.
-It is similar to the original Self Learning Path but tailored to self-guided newcomers.
 
 This guide consists of curated material to learn and put in practice.
 There is written content, links to valuable online posts, selected book chapters, and projects with guidelines and tests.
