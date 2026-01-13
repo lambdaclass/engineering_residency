@@ -1,9 +1,7 @@
 # Rust Project: Merkle Tree
 
 Merkle trees have become an important data structure to understand, and have wide applicability including in areas that are not blockchain-related.
-The goal of this project is to implement your own library crate in Rust implementing a Merkle tree.
-
-Implement a simple Merkle Tree in Rust:
+The goal of this project is to create your own library crate in Rust that implements a Merkle tree.
 - A Merkle Tree can be built out of an array.
 - A Merkle Tree can generate a proof that it contains an element.
 - A Merkle Tree can verify that a given hash is contained in it.
