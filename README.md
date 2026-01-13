@@ -1,11 +1,11 @@
-# LambdaClass Engineering Residency
+# LambdaClass Engineering Residency Self Learning Path
 
-Welcome to the LambdaClass Engineering Residency Self-learning Path! (name is a work in progress).
-It is similar to the Hacking Learning Path but tailored to self-guided newcomers.
+Welcome to the LambdaClass Engineering Residency Self Learning Path!.
+It is similar to the original Self Learning Path but tailored to self-guided newcomers.
 
 This guide consists of curated material to learn and put in practice.
 There is written content, links to valuable online posts, selected book chapters, and projects with guidelines and tests.
-To complete the residency program, you must read the material from start to finish and develop the projects as you encounter them in their relevant sections.
+To complete this self learning path and apply to the engineering residency, you must read the material from start to finish and develop the projects as you encounter them in their relevant sections.
 
 The program is self-paced, but is designed to be doable in about a month of part-time dedication.
 Once you have completed the program, you can let us know and we will schedule a few interviews to talk about your experience and go over your projects.
@@ -304,7 +304,7 @@ When the time comes to start one of the projects, please follow these steps:
   - CI: Part of learning a language or tool includes knowing how to automate the tasks of ensuring that a code change compiles and passes the tests. Since we host these learning projects on Github, the initial PR should include configuration for Github's Continuous Integration platform Actions to run after each change you commit to a PR.
   - Issues: Once you understand the project, create issues for the identifiable parts of the implementation solution. 
 - Branches:
-  - Immediately create a `dev` branch, in addition to the `main` one. Learning projects have two separate phases: the first is active development. During this phase, your PRs should branch from and merge into `dev`. Once your MVP has been achieved, and all the base functionality is implemented, create another PR from `dev` into `main` with the entirety of the code developed during the first phase. This PR will be reviewed at the end of the residency. 
+  - Immediately create a `dev` branch, in addition to the `main` one. Learning projects have two separate phases: the first is active development. During this phase, your PRs should branch from and merge into `dev`. Once your MVP has been achieved, and all the required base functionality is implemented, create another PR from `dev` into `main` with the entirety of the code developed during the first phase. This PR will be reviewed when you complete the Self Learning Path.
   - When tackling an issue, immediately create a branch for it, push it and open a PR in draft mode. Having an open PR that is not yet up to review is a good practice because it allows following the work, and provides a venue for discussion and comments even before a review takes place. 
   - At Lambda, repositories are automatically configured to delete branches once corresponding PRs are merged. Since learning projects are done under your user account, you must either configure this yourself or delete branches manually after merging. Allowing stale branches to accumulate is generally considered a bad practice. 
   - Another requirement is configuring branch protections for `main` and `dev` branches. Your CI must have jobs for ensuring that the code is formatted correctly according to the language's formatter, compiles, and passes tests. Each of these should be a separate job and required for merging a PR. 
@@ -564,11 +564,9 @@ git rebase -i --exec "git commit --amend --no-edit -S" main
 - What makes each database type unique?
 
 ---
-
 ## Part II Specific Topics
 
 ---
-
 ### Rust
 
 There are now many books on Rust and specific topics within Rust but we consider the following to be of the highest quality/relevance, and required reading:
