@@ -2,11 +2,11 @@
 
 Welcome to the LambdaClass Engineering Residency Self Learning Path!.
 
-This guide consists of curated material to learn and put in practice.
+This guide consists of curated material to learn and put into practice.
 There is written content, links to valuable online posts, selected book chapters, and projects with guidelines and tests.
 To complete this self learning path and apply to the engineering residency, you must read the material from start to finish and develop the projects as you encounter them in their relevant sections.
 
-The program is self-paced, but is designed to be doable in about a month of part-time dedication.
+The program is self-paced but is designed to be doable in about a month of part-time dedication.
 Once you have completed the program, you can let us know and we will schedule a few interviews to talk about your experience and go over your projects.
 
 Completion of the program, that is, studying the material and completing the projects, enables you to interview with us but does not guarantee acceptance to the residency. 
@@ -29,7 +29,7 @@ Our goal when preparing this guide is to ensure that even if you are not accepte
       - [Development processes and workflows](#development-processes-and-workflows)
       - [Design and coding standards](#design-and-coding-standards)
       - [Working on open-source projects](#working-on-open-source-projects)
-      - [Learning Projects](#learning-projects)
+      - [Learning Project Guidelines](#learning-project-guidelines)
     - [Technical Foundations](#technical-foundations)
       - [Development Environment](#development-environment)
         - [Homebrew](#homebrew)
@@ -38,10 +38,9 @@ Our goal when preparing this guide is to ensure that even if you are not accepte
         - [Code Editors and IDEs](#code-editors-and-ides)
       - [Software Engineering](#software-engineering)
         - [Complexity and KISS (Do The Simplest Thing That Could Possibly Work)](#complexity-and-kiss-do-the-simplest-thing-that-could-possibly-work)
-      - [The Unix Philosophy](#the-unix-philosophy)
-    - [Worse is Better](#worse-is-better)
+        - [The Unix Philosophy](#the-unix-philosophy)
+        - [Worse is Better](#worse-is-better)
       - [Linux](#linux)
-        - [How to try some commands in MacOS with a VM](#how-to-try-some-commands-in-macos-with-a-vm)
       - [Networking and SSH](#networking-and-ssh)
       - [Version Control, Git, and Github](#version-control-git-and-github)
         - [Git](#git)
@@ -55,12 +54,12 @@ Our goal when preparing this guide is to ensure that even if you are not accepte
   - [Part II Specific Topics](#part-ii-specific-topics)
     - [Rust](#rust)
       - [Exercises](#exercises)
-      - [Project - Rusty Merkle Tree](#project---rusty-merkle-tree)
-      - [Project - Async Linkchecker](#project---async-linkchecker)
-      - [Project - Rusty LC3](#project---rusty-lc3)
+      - [Project - Rusty Merkle Tree](#project-rusty-merkle-tree)
+      - [Project - Async Linkchecker](#project-async-linkchecker)
+      - [Project - Rusty LC3](#project-rusty-lc3)
     - [Performance Engineering](#performance-engineering)
     - [Distributed Systems](#distributed-systems)
-    - [The BEAM Ecosystem - Elixir](#the-beam-ecosystem---elixir)
+    - [The BEAM Ecosystem - Elixir](#the-beam-ecosystem-elixir)
       - [Phoenix](#phoenix)
       - [Project - Forth Interpreter](#project---forth-interpreter)
     - [General Cryptography](#general-cryptography)
@@ -70,6 +69,7 @@ Our goal when preparing this guide is to ensure that even if you are not accepte
       - [Introductory Material](#introductory-material)
       - [Ecosystem](#ecosystem)
       - [EVM](#evm)
+      - [Project - Ethrex](#project-ethrex)
 
 ---
 ## Introduction
@@ -124,7 +124,7 @@ That trust is earned only when every member of our team acts with integrity, saf
 
 One of Lambda's core goals is the betterment of society via technology, and cryptography (and soon AI) are central to these goals.
 - [Ergodic Group: Thesis](https://ergodicgroup.com/#thesis)
-- [Ergodic Group: Theory](https://ergodicgroup.com/theory.html)
+- [Ergodic Group: Theory](https://ergodicgroup.com/theory/)
 - [Lambda Crypto Doctrine](https://blog.lambdaclass.com/lambda-crypto-doctrine/)
 - [Transforming the Future with Zero-Knowledge Proofs, Fully Homomorphic Encryption and new Distributed Systems algorithms](https://blog.lambdaclass.com/transforming-the-future-with-zero-knowledge-proofs-fully-homomorphic-encryption-and-new-distributed-systems-algorithms/)
 - [Ethereum Series](https://federicocarrone.com/series/ethereum/)
@@ -284,7 +284,7 @@ Some of the most professional traits:
 - Use continuous integration, most likely GitHub Actions.
 - Make a good balance of features vs maintenance. Maintenance details usually matter more than adding a lot of features.
 
-#### Learning Projects Guidelines
+#### Learning Project Guidelines
 
 The learning path is not just a pile of material to read through, actually coding the projects is key to your learning process.
 The only way to learn how to do this is via practice, and since small exercises can only exercise very specific things, there are a few larger projects throughout the learning path that newcomers are expected to complete. 
@@ -743,3 +743,7 @@ The rest are for reference or reading at your own pace.
 - Parts I and II from: [Building an EVM from scratch](https://karmacoma.notion.site/Building-an-EVM-from-scratch-series-90ee3c827b314e0599e705a1152eecf9) 
 - [A Playdate with the EVM](https://web.archive.org/web/20250126120648/https://femboy.capital/evm-pt1)
 - [EVM Deep Dives](https://noxx.substack.com/p/evm-deep-dives-the-path-to-shadowy)
+
+#### Project: Ethrex
+
+See the [project description](projects/ethrex.md).
