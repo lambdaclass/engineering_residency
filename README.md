@@ -626,7 +626,7 @@ See the [project description](projects/rust_lc3_vm.md).
 ---
 ### Distributed Systems
 
-- The book [Designing Data-Intensive Applications](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/) is an excellent introduction to many topics related to building scalable and fault-tolerant systems. It provides a decent map of the territory and jumping-off points for anyone beginning to understand how systems are architected to provide these characteristics since it provides many references for further reading. Read chapters 1, 2 and 8.
+- The book [Designing Data-Intensive Applications](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/) is an excellent introduction to many topics related to building scalable and fault-tolerant systems. It gives a decent map of the territory and jumping-off points for anyone beginning to understand how systems are architected to provide these characteristics, since it's packed with references for further reading. Read chapters 1, 2 and 8.
 - [Notes on Distributed Systems for Young Bloods](https://www.somethingsimilar.com/2013/01/14/notes-on-distributed-systems-for-young-bloods/)
 - [A Distributed Systems Reading List](https://ferd.ca/a-distributed-systems-reading-list.html)
 - [Beating the CAP Theorem Checklist](https://ferd.ca/beating-the-cap-theorem-checklist.html)
