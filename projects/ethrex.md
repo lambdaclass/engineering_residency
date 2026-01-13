@@ -10,3 +10,5 @@ Your end goal is to:
 - run the prover client in [exec mode](https://docs.ethrex.xyz/CLI.html?highlight=exec#ethrex-l2-prover) (see the documentation for `ethrex l2 prover --proof-coordinators tcp://localhost:3900`)
 - create two accounts and fund them through the Hoodi faucet, 
 - and finally bridge between the L1 and L2 by [depositing](https://docs.ethrex.xyz/l2/interacting/deposit.html) on the first L2 account, transfer to the second L2 account, and then [withdrawing](https://docs.ethrex.xyz/l2/interacting/withdraw.html) from this second account back to the L1. 
+
+You should record a short video demonstrating the token bridging as proof.
