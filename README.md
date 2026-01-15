@@ -9,9 +9,7 @@ To complete this self learning path and apply to the engineering residency, you 
 The program is self-paced but is designed to be doable in about a month of part-time dedication.
 Once you have completed the program, you can let us know by sending a mail to hello at lambdaclass.com.
 Include your CV and links to your completed projects.
-If all is in order we will get in touch to schedule a few interviews to talk about your experience, go over your projects and what you have learned.
-
-Completion of the program, that is, studying the material and completing the projects, enables you to interview with us but does not guarantee acceptance to the residency. 
+If everything is in order, we will schedule a series of interviews to discuss your experience, review your projects, and explore what you have learned. Please note that completing the program —by studying the material and finishing the required projects— makes you eligible to interview with us, but it does not guarantee acceptance into the residency.
 Our goal when preparing this guide is to ensure that even if you are not accepted, you do take away what you learned as something valuable to your carreer as a software developer in these modern times.
 
 ---
