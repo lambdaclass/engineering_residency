@@ -14,4 +14,4 @@ As always, try to keep the code simple and do not overengineer the solution.
 
 Finally, your VM must be able to run the [roguelike](https://github.com/justinmeiners/lc3-rogue) from the terminal.
 
-Remember to follow the [general guidelines](readme.md#learning-projects-guidelines) for projects!
+Remember to follow the [general guidelines](../README.md#learning-project-guidelines) for projects!
