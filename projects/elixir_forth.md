@@ -27,7 +27,7 @@ Example code:
 
 ## Requirements:
 
-Remember to follow the [general guidelines](readme.md#learning-projects-guidelines) for projects!
+Remember to follow the [general guidelines](../README.md#learning-projects-guidelines for projects!
 
 #### 1: Core language
 The evaluator has to support the following words:

@@ -17,4 +17,4 @@ Here are some sources that you might find useful:
 - [Introduction to Merkle Tree - GeeksforGeeks](https://www.geeksforgeeks.org/introduction-to-merkle-tree/)
 - [Merkle Tree in Blockchain: What It Is and How It Works](https://www.investopedia.com/terms/m/merkle-tree.asp)
 
-Remember to follow the [general guidelines](readme.md#learning-projects-guidelines) for projects!
+Remember to follow the [general guidelines](../README.md#learning-projects-guidelines) for projects!
