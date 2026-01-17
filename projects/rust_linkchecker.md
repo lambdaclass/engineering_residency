@@ -19,4 +19,4 @@ And for every URL, the program must:
 A strict requirement is that the URLs must be processed concurrently 32 at a time, i.e. don't wait for one request to finish before processing the next. 
 You may use the `reqwest` crate to perform the HTTP requests. 
 
-Remember to follow the [general guidelines](../README.md#learning-projects-guidelines) for projects!
+Remember to follow the [general guidelines](../README.md#learning-project-guidelines) for projects!
